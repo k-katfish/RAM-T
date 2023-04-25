@@ -9,7 +9,7 @@ public class DatabaseConnector {
     HikariDataSource dataSource;
 
     public DatabaseConnector(String JdbcUrl, String username, String password) {
-        HikariConfig config = new HikariConfig();
+        /*HikariConfig config = new HikariConfig();
         config.setJdbcUrl(JdbcUrl);
         config.setUsername(username);
         config.setPassword(password);
@@ -18,6 +18,8 @@ public class DatabaseConnector {
         config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
 
         dataSource = new HikariDataSource(config);
+
+         */
     }
 
 

@@ -10,9 +10,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Main {
-    private static String config_mariadb_JdbcURL;
-    private static String config_mariadb_username;
-    private static String config_mariadb_password;
+    private static @Getter String config_mariadb_JdbcURL;
+    private static @Getter String config_mariadb_username;
+    private static @Getter String config_mariadb_password;
 
     private static @Getter DatabaseConnector databaseConnector;
 
@@ -33,11 +33,6 @@ public class Main {
             System.out.println("Invalid MariaDB configuration detected");
             return false;
         }
-
-        databaseConnector = new DatabaseConnector(config_mariadb_JdbcURL,config_mariadb_username,
-                config_mariadb_password);
-
-        config_mariadb_password = null;
         return true;
     }
 
