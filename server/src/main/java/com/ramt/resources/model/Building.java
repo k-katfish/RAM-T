@@ -1,4 +1,4 @@
-package com.ramt.model;
+package com.ramt.resources.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

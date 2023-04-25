@@ -1,6 +1,6 @@
-package com.ramt.service;
+package com.ramt.resources.service;
 
-import com.ramt.model.Building;
+import com.ramt.resources.model.Building;
 
 import java.util.ArrayList;
 

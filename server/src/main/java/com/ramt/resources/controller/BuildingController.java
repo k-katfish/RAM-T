@@ -1,8 +1,7 @@
-package com.ramt.controller;
+package com.ramt.resources.controller;
 
-import com.ramt.model.Building;
-import com.ramt.service.BuildingService;
-import com.ramt.service.BuildingServiceImpl;
+import com.ramt.resources.model.Building;
+import com.ramt.resources.service.BuildingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
