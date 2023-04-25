@@ -46,7 +46,7 @@ public class Main {
         File file = new File(".");
 
         try {
-            dbConfig.load(new FileInputStream(file.getAbsolutePath() + "/server/mariadb.properties"));
+            dbConfig.load(new FileInputStream(file.getAbsolutePath() + "/mariadb.properties"));
         } catch (IOException e) {
             e.printStackTrace();
             return false;
