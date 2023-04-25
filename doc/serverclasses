@@ -1,0 +1,48 @@
+#--------[ Company ]----------#
+| - int id                    |
+| - string name               |
+| - useraccount admin         |
+| - array[buildings]          |
+| company()                   |
+| void addbuilding()          |
+| void deletebuilding()       |
+| string toDTO()              |
+#-----------------------------#
+    |
+    v
+#--------[ building ]---------#
+| - string name               |
+| - int id                    |
+| - location location         |
+| - array[rooms]              |
+| building()                  |
+| void addroom()              |
+| void deleteroom()           |
+| string toDTO()              |
+#-----------------------------#
+    |
+    v
+#-----------[ Room ]-----------#               #-------[ RoomImage ]------#
+| - String roomname            |               | - Picture picture        |     ---->   #----[ picture ]----#
+| - String location            |               | - ??                     |             | idk some kindof interface
+| - uuid id                    |               | - something to make it dynamic         | or parent class?  |
+| - [img] RoomImage            |     ------>   |                          |             #-------------------#
+| - array[reservations]        |               #--------------------------#  
+| Room(string, string, uuid)   |                     
+| Room(string string) --> ^    |                                                            ^
+| void addReservation()        |                                                            |
+| void removeReservation()     |                                                            |
+| String toDTO()               |                                                            |
+#------------------------------#                                                            |  
+    |                   |                                                                   |
+    v       hasa        v                                                                   |
+#--------[ Reservation(s) ]-------#             #---------[ User ]---------#                |
+| - String title                  |             | - String username        |                |
+| - String room?                  |             | - [secure] password      |                |
+| - String username               |    ---->    | - String email           |                |
+| - datetime starttime            |             | - something ldap something 
+| - datetime endtime              |             | - [avatar] avatar        |    ---->  #------[ avatar ]-----#
+| reservation(title username start end)         | User() -- or ldap?       |           | - Picture picture   |
+| getters & setters               |             #--------------------------#           | - ??                |
+| String toDTO()                  |                                                    #---------------------#
+#---------------------------------#
