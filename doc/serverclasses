@@ -6,6 +6,17 @@
 | - uuid id                    |
 | Room(string, string, uuid)   |
 | Room(string string) --> ^    |
-|                              |
+| String toDTO()               |
 #------------------------------#
-
+    |                   |
+    v       hasa        v
+#--------[ Reservation(s) ]-------#
+| - String title                  |
+| - String room?                  |
+| - String username               |
+| - datetime starttime            |
+| - datetime endtime              |
+| reservation(title username start end)
+| getters & setters               |
+| String toDTO()                  |
+#---------------------------------#
