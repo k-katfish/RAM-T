@@ -1,0 +1,11 @@
+
+
+#-----------[ Room ]-----------#
+| - String roomname            |
+| - String location            |
+| - uuid id                    |
+| Room(string, string, uuid)   |
+| Room(string string) --> ^    |
+|                              |
+#------------------------------#
+
