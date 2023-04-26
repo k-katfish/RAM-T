@@ -14,25 +14,14 @@ public class Main {
     private static @Getter String config_mariadb_username;
     private static @Getter String config_mariadb_password;
 
-    private static @Getter DatabaseConnector databaseConnector;
-
     public static void main(String[] args) throws ConfigurationException {
         if (!InitializeConfiguration()) throw new ConfigurationException("Unable to initialize configuration");
-        if (!InitializeDatabaseConnector()) return;
 
         Application.main(args);
     }
 
     private static boolean InitializeConfiguration() {
         if (!initDatabaseConfig()) return false;
-        return true;
-    }
-
-    private static boolean InitializeDatabaseConnector() {
-        if (config_mariadb_JdbcURL == null || config_mariadb_username == null || config_mariadb_password == null) {
-            System.out.println("Invalid MariaDB configuration detected");
-            return false;
-        }
         return true;
     }
 
