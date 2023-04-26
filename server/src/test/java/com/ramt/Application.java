@@ -1,10 +1,10 @@
-package com.ramt.ramt;
+package com.ramt;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RoomAssetManagementToolkitApplicationTests {
+class Application {
 
 	@Test
 	void contextLoads() {
