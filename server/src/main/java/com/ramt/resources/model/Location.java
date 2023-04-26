@@ -13,13 +13,13 @@ public class Location {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(columnDefinition="location_id", name="location_id")
+    @Column(name="location_id")
     private long id;
 
     private @Getter @Setter String locationName;
     private @Getter @Setter String locationAddress;
 
-    @OneToMany(mappedBy="location")
+    @OneToMany(mappedBy = "location", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private @Getter List<Room> rooms;
 
     protected Location() {
