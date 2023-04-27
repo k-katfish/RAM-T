@@ -14,23 +14,24 @@ public class RoomController {
     @Autowired
     RoomServiceImpl roomServiceImpl;
 
-    @PostMapping("/add")
-    public void add(@RequestBody Room room) {
-        roomServiceImpl.addRoom(room);
-    }
 
-    @GetMapping("/findAll")
+    @GetMapping("/")
     public List<Room> getAllRooms() {
         return roomServiceImpl.findRooms();
     }
 
-    @GetMapping("/findById/{id}")
+    @PostMapping("/")
+    public void add(@RequestBody Room room) {
+        roomServiceImpl.addRoom(room);
+    }
+
+    @GetMapping("/{id}")
     public Room getRoomById(@PathVariable long id) {
         return roomServiceImpl.findRoomById(id);
     }
 
-    @DeleteMapping("/delete")
-    public void delete() {
-        roomServiceImpl.clearRooms();
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable long id) {
+        roomServiceImpl.deleteRoom(id);
     }
 }

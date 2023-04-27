@@ -14,23 +14,25 @@ public class LocationController {
     @Autowired
     LocationServiceImpl locationServiceImpl;
 
-    @PostMapping("/add")
-    public void addLocation(@RequestBody Location location) {
-        locationServiceImpl.addLocation();
-    }
-
-    @GetMapping("/findall")
+    @GetMapping("/")
     public ArrayList<Location> getAllLocations() {
         return locationServiceImpl.findAllLocation();
     }
 
-    @GetMapping("/findById/{id}")
+    @PostMapping("/")
+    public void addLocation(@RequestBody Location location) {
+        locationServiceImpl.addLocation();
+    }
+
+
+
+    @GetMapping("/{id}")
     public Location getLocationById(@PathVariable long id) {
         return locationServiceImpl.findAllLocationByID(id);
     }
 
-    @DeleteMapping("/delete")
-    public void deleteLocation() {
-        locationServiceImpl.deleteAllData();
+    @DeleteMapping("/{id}")
+    public void deleteLocation(@PathVariable long id) {
+        locationServiceImpl.deleteLocation(id);
     }
 }

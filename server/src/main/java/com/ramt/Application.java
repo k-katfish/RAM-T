@@ -43,6 +43,7 @@ public class Application {
 
 
 
+            /*
             // save the book
             locationRepository.save(location);
 
@@ -50,6 +51,7 @@ public class Application {
             roomRepository.save(new Room("Room 102", location));
             roomRepository.save(new Room("Room 303", location));
             roomRepository.save(new Room("Room 16", location));
+            */
         };
     }
 }
