@@ -4,7 +4,7 @@ import axios from 'axios';
 const SERVER_ADDRESS = 'http://localhost:45567/api/';
 
 export function getBuildings() {
-    return axios.get(SERVER_ADDRESS + 'buildings').then((res) => JSON.parse(res.request.response).sort((a, b) => a.name.localeCompare(b.name)))
+    return axios.get(SERVER_ADDRESS + 'location/findall').then((res) => JSON.parse(res.request.response).sort((a, b) => a.name.localeCompare(b.name)))
 }
 
 export function getBuilding(name) {

@@ -1,11 +1,12 @@
-import { Buildings } from './buildings'
+//import { Buildings } from './buildings'
+import { Locations } from "./location"
 
-const Locations = () => {
+const places = () => {
     return (
         <div>
-            <Buildings />
+            <Locations />
         </div>
     )
 }
 
-export default Locations
+export default places

@@ -8,7 +8,7 @@ function Navigation() {
     return (
         <Navbar bg="light" expand="lg" variant="tabs">
             <Container>
-                <Navbar.Brand href="#home">RAM-T</Navbar.Brand>
+                <Navbar.Brand href="/">RAM-T</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -24,6 +24,21 @@ function Navigation() {
                             <NavDropdown.Item href="#action/3.4">
                                 Separated link
                             </NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                    <Nav className="ml-auto">
+                        <Nav.Link href="/settings"><i class="bi bi-gear mx-l"></i> Settings</Nav.Link>
+                        <NavDropdown title={<i class="bi bi-plus-circle mx-l"></i>} id="basic-nav-dropdown">
+                            <NavDropdown.Item href="/createlocation">Create Location</NavDropdown.Item>
+                            <NavDropdown.Item href="/createroom">Create Room</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="/home">Home</NavDropdown.Item>
+                        </NavDropdown>
+
+                        <NavDropdown title={<i class="bi bi-person-circle mx-l"></i>} id="basic-nav-dropdown">
+                            <NavDropdown.Item href="/profile">View Profile</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#logout">Logout</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
